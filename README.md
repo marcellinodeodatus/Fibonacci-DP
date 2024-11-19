@@ -13,15 +13,8 @@ The program compares the performance of these approaches by measuring the execut
 
 ### 1. `fib_recursive(int n)`
 - **Description**: Solves the Fibonacci problem using a basic recursive approach.  
-- **Logic**:  
-  \[
-  F(n) = 
-  \begin{cases} 
-  n & \text{if } n < 2 \\
-  F(n-1) + F(n-2) & \text{otherwise}
-  \end{cases}
-  \]
-- **Time Complexity**: \( O(2^n) \) (exponential growth due to redundant calculations).  
+- **Logic**: The Fibonacci sequence is computed recursively as **F(n)= F(n-1) + F(n-2)**, with base case **F(0) = 0** and **F(1) = 1**.
+- **Time Complexity**: ( O ( $2^{n}$ )) (exponential growth due to redundant calculations). 
 - **Space Complexity**: \( O(n) \) (call stack grows to \( n \) levels).  
 - **Performance**: Very slow for large \( n \), as it recalculates many Fibonacci numbers repeatedly.  
 
@@ -49,7 +42,7 @@ The program compares the performance of these approaches by measuring the execut
 
 | **Function**         | **Time Complexity** | **Space Complexity** | **Efficiency**            |
 |-----------------------|---------------------|-----------------------|---------------------------|
-| `fib_recursive`       | \( O(2^n) \)       | \( O(n) \)           | Slow for large \( n \).   |
+| `fib_recursive`       | ( O ( $2^{n}$ ))       | \( O(n) \)           | Slow for large \( n \).   |
 | `fib_dp`              | \( O(n) \)         | \( O(n) \)           | Efficient, but uses array.|
 | `fib_dp_optimized`    | \( O(n) \)         | \( O(1) \)           | Most efficient solution.  |
 
@@ -60,3 +53,6 @@ The program compares the performance of these approaches by measuring the execut
 For `n = 40`, the program calculates the 40th Fibonacci number using all three methods and measures their execution times.
 
 Sample Output:
+- `Fib with recursion time = 1223 ms`
+- `Fib with DP time = 1 ms`
+- `Fib with DP optimized time = 1 ms`
